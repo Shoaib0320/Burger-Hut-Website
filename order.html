@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* styles.css */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        #order-page {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #order-page h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .order-details {
+            margin-top: 20px;
+        }
+
+        #order-img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+        }
+
+        #order-img:hover {
+            transform: scale(1.1); /* Scale image to 1.1 times its original size */
+        }
+
+        #order-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        #order-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .quantity-control {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .quantity-control button {
+            width: 40px;
+            height: 40px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        .quantity-control button:hover {
+            background-color: #0056b3;
+        }
+
+        .quantity-control span {
+            margin: 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .order-button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .order-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div id="order-page" class="active">
+        <h2>Order Now</h2>
+        <div class="order-details">
+            <img id="order-img" src="" alt="Ordered item">
+            <h3 id="order-title"></h3>
+            <p>Price: $<span id="order-price"></span></p>
+            <div class="quantity-control">
+                <button onclick="changeQuantity(-1)">-</button>
+                <span id="quantity">1</span>
+                <button onclick="changeQuantity(1)">+</button>
+            </div>
+            <button class="order-button" onclick="placeOrder()">Order</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imgSrc = localStorage.getItem('orderImgSrc');
+            const title = localStorage.getItem('orderTitle');
+            const price = localStorage.getItem('orderPrice');
+
+            document.getElementById('order-img').src = imgSrc;
+            document.getElementById('order-title').textContent = title;
+            document.getElementById('order-price').textContent = price;
+        });
+
+        function changeQuantity(amount) {
+            const quantityElem = document.getElementById('quantity');
+            let quantity = parseInt(quantityElem.textContent);
+
+            quantity += amount;
+            if (quantity < 1) quantity = 1;
+
+            quantityElem.textContent = quantity;
+        }
+
+        function placeOrder() {
+            Swal.fire({
+                title: 'Order Placed!',
+                text: 'Your order has been placed successfully.',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+        }
+    </script>
+</body>
+</html>

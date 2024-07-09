@@ -1,0 +1,143 @@
+/* Navbar CSS */
+.navbar {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.logo img {
+    width: 80px; 
+    height: auto;
+}
+
+/* Nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a,
+#navbar-btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    transform: translateY(-10px);
+
+}
+
+.nav-links a:hover,
+#navbar-btn:hover {
+    background-color: #555;
+    border-radius: 5px;
+    /* transform: translateY(-10px); */
+
+}
+
+/* CTA button */
+#navbar-btn {
+    background-color: #ff6347;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 60px; 
+        height: auto;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        padding: 10px;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        color: white;
+        flex-direction: column;
+        width: 40%;
+        height: auto;
+        text-align: center;
+        z-index: 10000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav-links.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-links.active li:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .nav-links.active li:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .nav-links.active li:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .nav-links.active li:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+
+    .nav-links.active li:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+
+    .nav-links.active li:nth-child(6) {
+        transition-delay: 0.6s;
+    }
+}
+
+/* Active state for burger menu */
+.burger-menu.active .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.active .line2 {
+    opacity: 0;
+}
+
+.burger-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

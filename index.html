@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Hut</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="show-menu.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img width="20px" src="./img/burger-logo.jpg" alt="Burger Hut Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="navbar-btn" class="cta-button">Order Now</button></li>
+            </ul>
+            <div class="burger-menu" id="burgerMenu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Bite into Happiness</h1>
+            <p>Experience the best burgers in town at Burger Hut</p>
+            <button class="cta-button">Order Now</button>
+        </div>
+    </section>
+
+        <!-- card-section -->
+           <section class="card-section">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card">
+                    <img src="./img/slider-1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Burger</h5>
+                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text-price">Price: 400</p>
+                      <button class="cta-button" onclick="orderNow(this)">Order Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                      <img src="./img/slider-2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text-price">Price: 400</p>
+                        <button class="cta-button" onclick="orderNow(this)">Order Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="./img/slider-1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text-price">Price: 400</p>
+                      <button class="cta-button" onclick="orderNow(this)">Order Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="./img/slider-4.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text-price">Price: 400</p>
+                        <button class="cta-button" onclick="orderNow(this)">Order Now</button>                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card">
+                      <img src="./img/slider-4.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text-price">Price: 400</p>
+                        <button class="cta-button" onclick="orderNow(this)">Order Now</button>                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card">
+                      <img src="./img/slider-4.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text-price">Price: 400</p>
+                        <button class="cta-button" onclick="orderNow(this)">Order Now</button>                      </div>
+                    </div>
+                  </div>
+              </div>
+            
+           </section>
+        <!-- card-section-end -->
+    <header>
+        <!-- Header content goes here -->
+    </header>
+    <section class="featured-burgers">
+        <h2>Our Signature Burgers</h2>
+        <div class="carousel">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel-content">
+                <div class="burger-slide active">
+                    <img src="./img/slider-1.jpg" alt="Burger 1">
+                    <h3>Classic Cheeseburger</h3>
+                    <p>Juicy beef patty with melted cheese, lettuce, and tomato.</p>
+                </div>
+                <div class="burger-slide">
+                    <img src="./img/slider-2.jpg" alt="Burger 2">
+                    <h3>Bacon Burger</h3>
+                    <p>Crispy bacon, cheddar cheese, and our special sauce.</p>
+                </div>
+                <div class="burger-slide">
+                    <img src="./img/slider-3.jpg" alt="Burger 3">
+                    <h3>Veggie Delight</h3>
+                    <p>Grilled veggie patty with fresh lettuce, tomato, and avocado.</p>
+                </div>
+            </div>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+         <!-- Button to show cars -->
+        <button id="showMenuBtn" class="show-menu-btn" class="cta-button">Explore Full Menu</button>
+      <!-- Container for cars -->
+      <div id="menuContainer" class="menu-container">
+  
+      </div>
+    </section>
+
+     
+    </section>   -->
+
+    <section id="about-us">
+        <div class="container">
+            <div class="about-us-content">
+                <div class="about-us-image">
+                    <img src="./img/about-us.jpg" alt="About Us Image">
+                </div>
+                <div class="about-us-text">
+                    <h2>About Burger Hut</h2>
+                    <p>Welcome to Burger Hut, where we serve the juiciest, most delicious burgers in town. Our mission is to provide an unforgettable dining experience with our unique burger recipes and top-quality ingredients.</p>
+                    <p>Founded in 2020, Burger Hut has quickly become a favorite spot for burger lovers. Our team is passionate about food, and we are committed to delivering the best burgers, sides, and shakes to our customers.</p>
+                    <p>Join us for a meal and experience the taste of Burger Hut!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="specials-section">
+        <h2>Special Offers</h2>
+        <div class="promo-container">
+            <div class="promo-card">
+                <h3>Double Cheese Delight</h3>
+                <p>Get a double cheeseburger with fries and a drink for just $9.99!</p>
+                <button class="cta-btn">Grab the Deal</button>
+            </div>
+            <div class="promo-card">
+                <h3>Family Feast</h3>
+                <p>Enjoy 4 burgers, 2 large fries, and 4 drinks for only $24.99!</p>
+                <button class="cta-btn">Grab the Deal</button>
+            </div>
+            <div class="promo-card">
+                <h3>Veggie Special</h3>
+                <p>Order any veggie burger and get a free side of onion rings.</p>
+                <button class="cta-btn">Grab the Deal</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial" id="testimonial-1">
+                <p>"The best burgers I've ever had! Absolutely delicious and juicy!"</p>
+                <h3>John Doe</h3>
+                <div class="rating">★★★★★</div>
+            </div>
+            <div class="testimonial" id="testimonial-2">
+                <p>"Amazing food and excellent service. Highly recommend!"</p>
+                <h3>Jane Smith</h3>
+                <div class="rating">★★★★★</div>
+            </div>
+            <div class="testimonial" id="testimonial-3">
+                <p>"A great place to hang out with friends and enjoy fantastic burgers."</p>
+                <h3>Mike Johnson</h3>
+                <div class="rating">★★★★☆</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location-hours">
+        <h2>Visit Us</h2>
+        <div class="content">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509427!2d144.95373631531795!3d-37.817209979751814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43d6f3e3e7%3A0xfb7e4e8b1dce6e0b!2sBurger%20Hut!5e0!3m2!1sen!2sus!4v1592819825074!5m2!1sen!2sus" 
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div class="details">
+                <p><strong>Address:</strong> 123 Burger Lane, Food Town, FT 45678</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> contact@burgerhut.com</p>
+                <p><strong>Hours of Operation:</strong></p>
+                <div class="btn-group text-light">
+                    <button type="button" class="btn btn-secondery dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">Timing <span style="margin: 10px;" class="visually-hidden">Toggle Dropdown</span></button>
+                    
+                    <ul class="dropdown-menu bg-dark">
+                      <li><a class="dropdown-item text-light" href="#">Monday: 10:00 AM - 10:00 PM</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Tuesday: 10:00 AM - 10:00 PM</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Wednesday: 10:00 AM - 10:00 PM</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Thursday: 10:00 AM - 10:00 PM</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Friday: 10:00 AM - 11:00 PM</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Saturday: 10:00 AM - 11:00 PM</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Sunday: 11:00 AM - 9:00 PM</a></li>
+                    </ul>
+                  </div>
+                   <br>
+                <button id="get-directions">Get Directions</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- social-media -->
+    <section id="social-media">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon facebook"></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon instagram"></a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon twitter"></a>
+            <a href="https://www.whatsapp.com" target="_blank" class="social-icon whatsapp"></a>
+        </div>
+        <div id="feed"></div>
+    </section>
+
+
+    <section class="newsletter-section dark-theme">
+        <div class="container">
+            <center>
+            <h2 class="section-title">Stay Updated</h2>
+            <p class="section-description">Subscribe to our newsletter for updates and special offers.</p>
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" id="email" class="email-input" placeholder="Enter your email address" required>
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+        </center>
+        </div>
+    </section>
+
+    
+
+<!-- Footer -->
+<footer>
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="social-media mb-4 text-center">
+        <!-- Facebook -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+        <!-- Twitter -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+        <!-- Google -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+        <!-- Instagram -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+        <!-- Linkedin -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Github -->
+        <a class="btn btn-outline btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Form -->
+      <section class="newsletter">
+        <form action="">
+          <div class="row d-flex justify-content-center">
+            <div class="col-auto">
+              <p class="pt-2"><strong>Sign up for our newsletter</strong></p>
+            </div>
+            <div class="col-md-5 col-12">
+              <div class="form-outline">
+                <input type="email" id="form5Example24" class="form-control" />
+                <label class="form-label" for="form5Example24">Email address</label>
+              </div>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-subscribe mb-4">Subscribe</button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <!-- Section: Form -->
+  
+      <!-- Section: Text -->
+      <section class="section-text mb-4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam sequi voluptate quas.</p>
+      </section>
+      <!-- Section: Text -->
+       <div>
+         
+         <ul style="display: flex; list-style: none;justify-content: center; align-items: center;gap: 30px;">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+         </ul>
+       </div>
+
+      <!-- Section: Links -->
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="copyright">
+      <p>© 2024 Copyright: <a href="https://mdbootstrap.com/" class="text-reset fw-bold">MDBootstrap.com</a></p>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  
+  <!-- FontAwesome CDN -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+    <script src="show-menu.js"></script>
+    <script src="footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

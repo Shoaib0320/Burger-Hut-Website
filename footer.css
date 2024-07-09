@@ -1,0 +1,138 @@
+/* General Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+  }
+
+  footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  footer a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    gap: 20px;
+  }
+
+  footer a:hover {
+    color: #fff;
+  }
+
+  footer h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Social Media Section */
+  footer .btn-outline {
+    border: 1px solid #fff;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  footer .btn-outline:hover {
+    background-color: #ff6347;
+    color: #fff;
+  }
+
+  footer .social-media i {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  footer .social-media a {
+    border: 1px solid #ff6347;
+  }
+
+  /* Newsletter Section */
+  footer .form-outline {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  footer .form-outline input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff6347;
+    background: transparent;
+    color: #fff;
+  }
+
+  footer .form-outline input:focus {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff6347;
+    background: transparent;
+    color: #fff;
+  }
+
+  footer .form-outline label {
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    padding: 0 5px;
+    background: #333;
+    color: #ff6347;
+    font-size: 14px;
+  }
+
+  footer .btn-subscribe {
+    border: 1px solid #ff6347;
+    color: #ff6347;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  footer .btn-subscribe:hover {
+    background-color: #ff6347;
+    color: #fff;
+  }
+
+  /* Text Section */
+  footer .section-text {
+    margin-bottom: 20px;
+  }
+
+  /* Links Section */
+  footer .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  footer .links ul {
+    list-style: none;
+    padding: 0;
+    border: 1px #ff6347;
+
+  }
+
+  footer .links ul li {
+    margin-bottom: 10px;
+  }
+
+  /* Copyright Section */
+  footer .copyright {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    footer .links {
+      flex-direction: column;
+    }
+
+    footer .links ul {
+      margin-bottom: 20px;
+    }
+}
